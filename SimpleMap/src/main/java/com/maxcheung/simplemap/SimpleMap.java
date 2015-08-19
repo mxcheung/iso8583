@@ -1,6 +1,6 @@
-package SimpleMap;
+package com.maxcheung.simplemap;
 
-public interface ISimpleMap {
+public interface SimpleMap {
 	void put(Object key, Object value);
 
 	Object get(Object key);

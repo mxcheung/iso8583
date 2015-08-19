@@ -1,17 +1,17 @@
-package SimpleMapImpl;
+package com.maxcheung.simplemap.impl;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
 public class SimpleMapImplTest {
 
-	SimpleMap sm = new SimpleMap();
-
+	SimpleMapImpl sm;
+	
 	@Before
 	public void setUp() {
-		sm = new SimpleMap();
+		sm = new SimpleMapImpl();
 	}
 
 	@Test
@@ -19,6 +19,26 @@ public class SimpleMapImplTest {
 		String key = "Hello";
 		sm.put(key, "World");
 		assertEquals("World", sm.get(key));
+		assertEquals(1, sm.size());
+	}
+	
+	@Test
+	public void shouldRemoveItem() {
+		String key = "Hello";
+		sm.put(key, "World");
+		assertEquals("World", sm.get(key));
+		assertEquals(1, sm.size());
+		sm.remove(key);
+		assertEquals(0, sm.size());
+	}
+
+	@Test
+	public void shouldNotRemoveUnknownKey() {
+		String key = "Hello";
+		sm.put(key, "World");
+		assertEquals("World", sm.get(key));
+		assertEquals(1, sm.size());
+		sm.remove("Unknown");
 		assertEquals(1, sm.size());
 	}
 
@@ -36,7 +56,7 @@ public class SimpleMapImplTest {
 	public void shouldReachMaxItems() {
 		String key = "Hello";
 		int maxSize = 100;
-		sm = new SimpleMap(maxSize);
+		sm = new SimpleMapImpl(maxSize);
 		sm.put(key, "World");
 		assertEquals("World", sm.get(key));
 		assertEquals(1, sm.size());
@@ -46,5 +66,4 @@ public class SimpleMapImplTest {
 		}
 		assertEquals(maxSize, sm.size());
 	}
-
 }
