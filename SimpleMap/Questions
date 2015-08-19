@@ -1,0 +1,13 @@
+1. Review & Clarify Requirements
+   Q1:  Will an exception be raised when attempting to put an object exceeding maximum buckets  (100)
+   		or Should it replace the oldest item?
+
+2. Design
+
+3. Present the design
+
+
+4. Implement & Test
+
+
+5. Feedback
