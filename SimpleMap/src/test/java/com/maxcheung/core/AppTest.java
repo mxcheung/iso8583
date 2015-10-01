@@ -15,15 +15,15 @@ import com.maxcheung.simplemap.SimpleMap;
 @ContextConfiguration(classes = AppConfig.class)
 public class AppTest {
 
-	@Autowired
-	private SimpleMap sm;
+    @Autowired
+    private SimpleMap sm;
 
-	@Test
-	public void shouldGetItem() {
-		String key = "Hello";
-		sm.put(key, "World");
-		assertEquals("World", sm.get(key));
-		assertEquals(1, sm.size());
-	}
+    @Test
+    public void shouldGetItem() {
+        String key = "Hello";
+        sm.put(key, "World");
+        assertEquals("World", sm.get(key));
+        assertEquals(1, sm.size());
+    }
 
 }

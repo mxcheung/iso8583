@@ -9,21 +9,18 @@ import org.springframework.context.annotation.Configuration;
 import com.maxcheung.puzzle.service.SequenceCalculatorService;
 import com.maxcheung.puzzle.service.SequenceCalculatorServiceImpl;
 
-
 @Configuration
 public class AppConfig {
 
-	private static final int cores = Runtime.getRuntime().availableProcessors();
+    private static final int CORES = Runtime.getRuntime().availableProcessors();
 
-	@Bean(name = "sequenceCalculatorService")
-	public SequenceCalculatorService sequenceCalculatorService() {
-		SequenceCalculatorService sequenceCalculatorService = new SequenceCalculatorServiceImpl(threadPoolExecutor());
-		return sequenceCalculatorService;
-	}
+    @Bean(name = "sequenceCalculatorService")
+    public SequenceCalculatorService sequenceCalculatorService() {
+        return new SequenceCalculatorServiceImpl(threadPoolExecutor());
+    }
 
-	public ThreadPoolExecutor threadPoolExecutor() {
-		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(cores);
-		return executor;
-	}
+    public ThreadPoolExecutor threadPoolExecutor() {
+        return (ThreadPoolExecutor) Executors.newFixedThreadPool(CORES);
+    }
 
 }

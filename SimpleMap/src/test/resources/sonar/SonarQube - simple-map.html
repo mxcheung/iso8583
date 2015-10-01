@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost:9000/dashboard/index/5 -->
+<html class="dashboard-page"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" type="image/x-icon" href="http://localhost:9000/images/favicon.ico?1443685836">
+  
+  <title>SonarQube - simple-map</title>
+
+  <link href="./SonarQube - simple-map_files/sonar.css" rel="stylesheet" media="all">
+  
+  <script>
+    var pageLang = 'en_US';
+    
+    window.SS = typeof window.SS === 'object' ? window.SS : {};
+    window.SS.hoursInDay = 8;
+    window.SS.user = '';
+    window.SS.userName = '';
+  </script>
+  <script src="./SonarQube - simple-map_files/sonar.js"></script>
+  <script>
+    var baseUrl = '';
+    var $j = jQuery.noConflict();
+    $j(document).ready(function () {$j('.open-modal').modal()});
+    moment.lang(window.pageLang);
+    numeral.language(window.pageLang);
+  </script>
+  <script src="./SonarQube - simple-map_files/require.js"></script>
+  <script>
+    requirejs.config({
+      baseUrl: baseUrl + '/js',
+      urlArgs: 'v=5.1.2'
+    });
+  </script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nav/app" src="./SonarQube - simple-map_files/app.js"></script></head>
+<body>
+
+
+  
+<div class="page-wrapper page-wrapper-context" id="container">
+  <nav class="navbar navbar-global page-container navbar-fade in" id="global-navigation"><div class="container">
+  <div class="navbar-header">
+    <a class="navbar-brand " href="http://localhost:9000/">
+        <img src="./SonarQube - simple-map_files/logo.svg" alt="Embrace Quality" title="Embrace Quality">
+    </a>
+  </div>
+
+  <ul class="nav navbar-nav">
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost:9000/dashboard/index/5#">
+        Dashboards&nbsp;<span class="icon-dropdown"></span>
+      </a>
+      <ul class="dropdown-menu">
+          <li>
+            <a href="http://localhost:9000/dashboard/?did=4">Home</a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a href="http://localhost:9000/issues/search">Issues</a>
+    </li>
+    <li>
+      <a href="http://localhost:9000/measures/search?qualifiers[]=TRK">Measures</a>
+    </li>
+    <li>
+      <a href="http://localhost:9000/coding_rules">Rules</a>
+    </li>
+    <li>
+      <a href="http://localhost:9000/profiles">Quality Profiles</a>
+    </li>
+    <li>
+      <a href="http://localhost:9000/quality_gates">Quality Gates</a>
+    </li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost:9000/dashboard/index/5#">More&nbsp;<i class="icon-dropdown"></i></a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="http://localhost:9000/comparison">Compare Projects</a>
+        </li>
+        <li>
+          <a href="http://localhost:9000/dependencies">Dependencies</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="js-login" href="http://localhost:9000/sessions/new">Log in</a>
+      </li>
+    <li class="dropdown js-search-dropdown">
+      <a class="dropdown-toggle navbar-search-dropdown js-search-dropdown-toggle" data-toggle="dropdown" href="http://localhost:9000/dashboard/index/5#">
+        <i class="icon-search navbar-icon"></i>&nbsp;<span class="icon-dropdown"></span>
+      </a>
+
+      <div class="js-search-region dropdown-menu dropdown-menu-right"></div>
+    </li>
+    <li>
+      <a class="js-shortcuts" href="http://localhost:9000/dashboard/index/5#">
+        <i class="icon-help navbar-icon"></i>
+      </a>
+    </li>
+  </ul>
+
+</div>
+</nav>
+
+  
+    <nav class="navbar navbar-context page-container" id="context-navigation"><div class="container">
+  <ul class="nav navbar-nav nav-crumbs">
+      <li>
+        <a href="http://localhost:9000/dashboard/index?id=com.maxcheung%3Asimple-map">
+          <i class="icon-qualifier-trk"></i>&nbsp;simple-map
+        </a>
+      </li>
+  </ul>
+
+  <div class="navbar-right navbar-context-meta">
+    Version 1.0
+    /
+    October 1 2015 10:08 PM
+  </div>
+
+  <ul class="nav navbar-nav nav-tabs">
+    <li class="active">
+      <a href="http://localhost:9000/dashboard/index?id=com.maxcheung%3Asimple-map">Overview</a>
+    </li>
+    <li>
+      <a href="http://localhost:9000/components/index/5">Components</a>
+    </li>
+    <li>
+      <a href="http://localhost:9000/component_issues/index?id=com.maxcheung%3Asimple-map">Issues</a>
+    </li>
+    <li class="dropdown ">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost:9000/dashboard/index/5#">More&nbsp;<i class="icon-dropdown"></i></a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-header">Dashboards</li>
+          <li>
+            <a href="http://localhost:9000/dashboard/index?id=com.maxcheung:simple-map&did=2">Issues Report</a>
+          </li>
+          <li>
+            <a href="http://localhost:9000/dashboard/index?id=com.maxcheung:simple-map&did=3">Time Machine</a>
+          </li>
+        <li class="divider"></li>
+        <li class="dropdown-header">Tools</li>
+        <li>
+          <a href="http://localhost:9000/design/index/5">Design</a>
+        </li>
+        <li>
+          <a href="http://localhost:9000/libraries/index/5">Libraries</a>
+        </li>
+          <li>
+            <a href="http://localhost:9000/comparison/index?resource=com.maxcheung:simple-map">Compare</a>
+          </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</nav>
+  
+
+  
+  <div id="body" class="page-container">
+    <div id="content">
+      <div class="error" id="error" style="display:none">
+        <span id="errormsg"></span> &nbsp;&nbsp;[<a href="http://localhost:9000/dashboard/index/5#" onclick="javascript:$j(&#39;#error&#39;).hide();return false;">hide</a>]
+      </div>
+      <div class="notice" id="info" style="display:none">
+        <span id="infomsg"></span> &nbsp;&nbsp;[<a href="http://localhost:9000/dashboard/index/5#" onclick="javascript:$j(&#39;#info&#39;).hide();return false;">hide</a>]
+      </div>
+      <div class="warning" id="warning" style="display:none">
+        <span id="warningmsg"></span> &nbsp;&nbsp;[<a href="http://localhost:9000/dashboard/index/5#" onclick="javascript:$j(&#39;#warning&#39;).hide();return false;">hide</a>]
+      </div>
+      <div class="page" id="dashboard">
+    <span class="hidden" id="is-project-dashboard">&nbsp;</span>
+    <header class="page-header">
+  <h1 class="page-title">Main Dashboard</h1>
+
+
+  <div class="page-actions operations noprint">
+    
+      
+        
+        
+          <form method="GET" action="./SonarQube - simple-map_files/SonarQube - simple-map.html" style="display: inline" class="spacer-left">
+            <input type="hidden" name="did" value="1">
+            <div class="select2-container" id="s2id_select-comparison" style="width: 250px">    <a href="http://localhost:9000/dashboard/index/5#" onclick="return false;" class="select2-choice">   <span>Time changes...</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="select-comparison" name="period" onchange="submit()" style="display: none;"><option selected="" value="0" class="small">Time changes...</option><option value="1" class="small">Δ since previous analysis (Oct 01 2015)</option><option value="2" class="small">Δ over 30 days (Oct 01 2015)</option></select><script>$j(document).ready(function() {$j('#select-comparison').select2({minimumResultsForSearch:230,allowClear:false,placeholder:'',width:'250px'});});</script>          </form>
+        
+      
+    
+
+    
+  </div>
+</header>
+
+  <div style="width: 100%;display: block; float: none">
+    
+      <!-- the right margin with 1px is a trick for IE. See SONAR-2637 -->
+      <div class="dashboard-column-wrapper" style="width: 50%;margin: 0 -1px 0 0;">
+        <div class="dashboard-column" id="dashboard-column-1" style="margin: 0 5px 0 0px;">
+          
+              
+
+
+  <div class="block" id="block_1">
+    
+
+    <div class="size" style="height:100%;">
+      
+        <div class="widget">
+          
+<div class="widget-row widget-row-x">
+<div class="widget-span widget-span-3-5">
+<div class="widget-measure-container">
+
+<p class="widget-measure widget-measure-main">
+<span class="widget-label">Lines of code</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=ncloc" class="widget-link " rel="" title=""><span id="m_ncloc">151</span></a>
+<i class="icon-trend-2 icon-black"></i></span>
+</p>
+
+
+
+
+Java
+
+
+
+</div>
+</div>
+<div class="widget-span widget-span-3-5">
+<div class="widget-measure-container">
+<p class="widget-measure widget-measure-main">
+<span class="widget-label">Files</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=files" class="widget-link " rel="" title=""><span id="m_files">6</span></a>
+</span>
+</p>
+
+<p class="widget-measure">
+<span class="widget-label">Directories</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=directories" class="widget-link " rel="" title=""><span id="m_directories">6</span></a>
+</span>
+</p>
+
+<p class="widget-measure">
+<span class="widget-label">Lines</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=lines" class="widget-link " rel="" title=""><span id="m_lines">196</span></a>
+<i class="icon-trend-2 icon-black"></i></span>
+</p>
+
+
+</div>
+</div>
+<div class="widget-span widget-span-5">
+<div class="widget-measure-container">
+
+<p class="widget-measure widget-measure-main">
+<span class="widget-label">Functions</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=functions" class="widget-link " rel="" title=""><span id="m_functions">20</span></a>
+</span>
+</p>
+
+
+<p class="widget-measure">
+<span class="widget-label">Classes</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=classes" class="widget-link " rel="" title=""><span id="m_classes">6</span></a>
+</span>
+</p>
+
+
+<p class="widget-measure">
+<span class="widget-label">Statements</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=statements" class="widget-link " rel="" title=""><span id="m_statements">49</span></a>
+</span>
+</p>
+
+
+<p class="widget-measure">
+<span class="widget-label">Accessors</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=accessors" class="widget-link " rel="" title=""><span id="m_accessors">0</span></a>
+</span>
+</p>
+
+</div>
+</div>
+</div>
+
+          <div class="clear"></div>
+        </div>
+      
+
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+
+
+
+          
+              
+
+
+  <div class="block" id="block_2">
+    
+
+    <div class="duplications" style="height:100%;">
+      
+        <div class="widget">
+          
+<div class="widget-row">
+<div class="widget-span widget-span-12">
+<div class="widget-measure widget-measure-main">
+<span class="widget-label">Duplications</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?highlight=duplicated_lines_density&metric=duplicated_lines" class="widget-link " rel="" title=""><span id="m_duplicated_lines_density">0.0%</span></a>
+</span>
+</div>
+<div class="widget-measure">
+<span class="widget-label"> lines</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=duplicated_lines" class="widget-link " rel="" title=""><span id="m_duplicated_lines">0</span></a>
+</span>
+</div>
+<div class="widget-measure">
+<span class="widget-label"> blocks</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=duplicated_blocks" class="widget-link " rel="" title=""><span id="m_duplicated_blocks">0</span></a>
+</span>
+</div>
+<div class="widget-measure">
+<span class="widget-label"> files</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=duplicated_files" class="widget-link " rel="" title=""><span id="m_duplicated_files">0</span></a>
+</span>
+</div>
+</div>
+</div>
+
+          <div class="clear"></div>
+        </div>
+      
+
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+
+
+
+          
+              
+
+
+  <div class="block" id="block_3">
+    
+
+    <div class="complexity" style="height:100%;">
+      
+        <div class="widget">
+          
+<div class="widget-row">
+<div class="widget-span widget-span-5">
+<div class="widget-measure-container">
+
+<p class="widget-measure widget-measure-main">
+<span class="widget-label">Complexity</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=complexity" class="widget-link " rel="" title=""><span id="m_complexity">18</span></a>
+</span>
+</p>
+
+
+<p class="widget-measure">
+<span class="widget-label"> /function</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=function_complexity" class="widget-link " rel="" title=""><span id="m_function_complexity">0.9</span></a>
+</span>
+</p>
+
+
+<p class="widget-measure">
+<span class="widget-label"> /class</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=class_complexity" class="widget-link " rel="" title=""><span id="m_class_complexity">3.0</span></a>
+</span>
+</p>
+
+
+<p class="widget-measure">
+<span class="widget-label"> /file</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=file_complexity" class="widget-link " rel="" title=""><span id="m_file_complexity">3.0</span></a>
+</span>
+</p>
+
+</div>
+</div>
+<div class="widget-span widget-span-7">
+
+<div class="dashbox" id="cmp_charts">
+<script type="text/javascript">
+//<![CDATA[
+function selectComplexity(metric) {
+$j('#cmp_charts .chart').hide();
+$j('#chart_' + metric).show();
+}
+</script>
+<style>
+#cmp_charts form {
+font-size: 93%; padding-left: 30px;
+}
+#cmp_charts form label {
+padding-right: 5px;
+}
+</style>
+
+
+  <div id="chart_function_complexity_distribution" class="chart" style="display: block">
+    <img alt="Functions distribution /complexity" id="chart_img_function_complexity_distribution" src="./SonarQube - simple-map_files/chart" title="Functions distribution /complexity">  </div>
+
+
+
+  <div id="chart_file_complexity_distribution" class="chart" style="display: none">
+    <img alt="Files distribution /complexity" id="chart_img_file_complexity_distribution" src="./SonarQube - simple-map_files/chart(1)" title="Files distribution /complexity">  </div>
+
+
+<form>
+
+<input type="radio" name="cmp_dist" value="function_complexity_distribution" id="cmp_dist_function_complexity_distribution" onclick="selectComplexity(&#39;function_complexity_distribution&#39;);" checked="">
+<label for="cmp_dist_function_complexity_distribution">Functions</label>
+
+<input type="radio" name="cmp_dist" value="file_complexity_distribution" id="cmp_dist_file_complexity_distribution" onclick="selectComplexity(&#39;file_complexity_distribution&#39;);">
+<label for="cmp_dist_file_complexity_distribution">Files</label>
+
+</form>
+</div>
+
+</div>
+</div>
+
+          <div class="clear"></div>
+        </div>
+      
+
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+
+
+
+          
+              
+
+
+  <div class="block" id="block_4">
+    
+
+    <div class="events" style="height:100%;">
+      
+        <div class="widget">
+          
+<script type="text/javascript">
+function changeCategory(categoryId, widgetId) {
+var eventTableMaxSize = 8;
+$j('#events_' + widgetId + ' tr.event').hide();
+var elements;
+if (categoryId=='all') {
+elements = $j('#events_' + widgetId + ' tr.event');
+} else {
+elements = $j('#events_' + widgetId + ' tr.cat_' + categoryId);
+}
+var elementsToDisplay = elements.slice(0,eventTableMaxSize);
+if (elementsToDisplay.size()==0) {
+$j('#events_' + widgetId).hide();
+$j('#show_more_events_' + widgetId).hide();
+$j('#no_event_message_' + widgetId).show();
+} else {
+$j('#events_' + widgetId).show();
+$j('#no_event_message_' + widgetId).hide();
+elementsToDisplay.show();
+if (elements.size() > eventTableMaxSize) {
+$j('#show_more_events_' + widgetId).show();
+} else {
+$j('#show_more_events_' + widgetId).hide();
+}
+}
+}
+function showAllEvents(widgetId) {
+var selectedCategory = $j('#select_category_' + widgetId).val();
+if (selectedCategory=='all') {
+$j('#events_' + widgetId + ' tr.event').show();
+} else {
+$j('#events_' + widgetId + ' tr.cat_' + selectedCategory).show();
+}
+$j('#show_more_events_' + widgetId).hide();
+}
+</script>
+<h3>Events &nbsp;&nbsp;
+<div class="select2-container small" id="s2id_select_category_4" style="width: 150px">    <a href="http://localhost:9000/dashboard/index/5#" onclick="return false;" class="select2-choice">   <span>All</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select class="small" id="select_category_4" onchange="changeCategory(this.value, 4);" style="display: none;">
+<option value="all">All</option>
+
+<option value="alert">Quality Gate</option>
+
+<option value="other">Other</option>
+
+<option value="profile">Quality Profile</option>
+
+<option value="version">Version</option>
+
+</select>
+<script>
+$j(function() {
+$j('#select_category_4').select2({ width: '150px' });
+});
+</script>
+</h3>
+<table id="events_4" class="spaced data">
+<thead>
+<tr>
+<th colspan="4"></th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="even event cat_version" style="display: table-row;">
+<td x="Thu Oct 01 22:08:15 +1000 2015">Oct 01 2015</td>
+<td>Version</td>
+<td>
+1.0</td>
+<td>
+
+</td>
+</tr>
+
+</tbody>
+</table>
+<div id="no_event_message_4" style="margin: 5px; display: none;">
+<span class="empty_widget">No event</span>
+</div>
+<a href="http://localhost:9000/dashboard/index/5#" onclick="showAllEvents(4);return false;" id="show_more_events_4" class="action" style="display: none;">Show All</a>
+<script type="text/javascript">
+changeCategory('all', 4);
+</script>
+
+          <div class="clear"></div>
+        </div>
+      
+
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+
+
+
+          
+              
+
+
+  <div class="block" id="block_5">
+    
+
+    <div class="description" style="height:100%;">
+      
+        <div class="widget">
+<h3 class="description-widget-project">
+<i class="icon-qualifier-trk"></i>
+simple-map</h3>
+<span class="description-widget-key">com.maxcheung:simple-map</span>
+
+
+<p class="description-widget-description">
+Profiles:
+
+<span class="nowrap">
+<span id="resource_profile">
+<a href="http://localhost:9000/profiles/show?key=java-sonar-way-76949" class="widget-link" id="java_profile_link">Sonar way</a></span>
+<span class="subtitle">
+(Java)
+</span>
+
+</span>
+
+</p>
+
+
+
+</div>
+      
+
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+
+
+
+          
+        </div>
+      </div>
+    
+      <!-- the right margin with 1px is a trick for IE. See SONAR-2637 -->
+      <div class="dashboard-column-wrapper" style="width: 50%;margin: 0 -1px 0 0;">
+        <div class="dashboard-column" id="dashboard-column-2" style="margin: 0 0px 0 5px;">
+          
+              
+
+
+  <div class="block" id="block_6">
+    
+
+    <div class="debt_overview" style="height:100%;">
+      
+        <div class="widget">
+          
+
+<div class="widget-row">
+<div class="widget-span widget-span-6">
+<div class="widget-measure-container">
+<div class="widget-measure widget-measure-main">
+<span class="widget-label">SQALE Rating</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=sqale_rating" class="widget-link " rel="" title=""><span id="m_sqale_rating" class="rating rating-A">A</span></a>
+
+
+</span>
+</div>
+</div>
+</div>
+
+
+<div class="widget-span widget-span-6">
+<div class="widget-measure-container">
+<div class="widget-measure widget-measure-main">
+<span class="widget-label">Technical Debt Ratio</span>
+<span class="nowrap">
+<a href="http://localhost:9000/drilldown/measures/5?metric=sqale_debt_ratio" class="widget-link " rel="" title=""><span id="m_sqale_debt_ratio">0.4%</span></a>
+<i class="icon-trend--1 icon-green"></i></span>
+</div>
+</div>
+</div>
+</div>
+
+
+          <div class="clear"></div>
+        </div>
+      
+
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+
+
+
+          
+              
+
+
+  <div class="block" id="block_7">
+    
+
+    <div class="rules" style="height:100%;">
+      
+        <div class="widget">
+          
+<div class="widget-row">
+
+<div class="widget-span widget-span-3">
+<div class="widget-measure-container">
+<div class="widget-measure widget-measure-main">
+<span class="widget-label">Debt</span>
+<a href="http://localhost:9000/drilldown/measures/5?metric=sqale_index" class="widget-link link-rules-debt" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="As calculated on Oct 01 2015 22:08">
+<span id="m_sqale_index">19min</span></a>
+<i class="icon-trend--2 icon-green"></i></div>
+<div class="widget-measure-delta">
+
+</div>
+</div>
+</div>
+
+<div class="widget-span widget-span-3">
+<div class="widget-measure-container">
+<div class="widget-measure widget-measure-main">
+<span class="widget-label">Issues</span>
+<span class="nowrap">
+<span class="link-rules-issues">
+<a href="http://localhost:9000/component_issues?id=com.maxcheung%3Asimple-map" class="widget-link link-rules-debt" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="As calculated on Oct 01 2015 22:08">
+<span id="m_violations">8</span></a>
+</span>
+<i class="icon-trend--1 icon-green"></i></span>
+</div>
+<div class="widget-measure-delta">
+
+</div>
+</div>
+</div>
+<div class="widget-span widget-span-4">
+<table class="data widget-barchar">
+<tbody><tr>
+<td class="thin nowrap">
+<i class="icon-severity-blocker"></i>
+Blocker</td>
+<td class="thin right nowrap">
+<a href="http://localhost:9000/component_issues?id=com.maxcheung%3Asimple-map#resolved=false|severities=BLOCKER" class="widget-link drilldown_BLOCKER" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="As calculated on Oct 01 2015 22:08">
+<span id="m_blocker_violations">0</span></a>
+</td>
+<td class="thin nowrap">
+
+<i class="icon-trend-0"></i>
+</td>
+</tr>
+<tr>
+<td class="thin nowrap">
+<i class="icon-severity-critical"></i>
+Critical</td>
+<td class="thin right nowrap">
+<a href="http://localhost:9000/component_issues?id=com.maxcheung%3Asimple-map#resolved=false|severities=CRITICAL" class="widget-link drilldown_CRITICAL" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="As calculated on Oct 01 2015 22:08">
+<span id="m_critical_violations">0</span></a>
+</td>
+<td class="thin nowrap">
+
+<i class="icon-trend-0"></i>
+</td>
+</tr>
+<tr>
+<td class="thin nowrap">
+<i class="icon-severity-major"></i>
+Major</td>
+<td class="thin right nowrap">
+<a href="http://localhost:9000/component_issues?id=com.maxcheung%3Asimple-map#resolved=false|severities=MAJOR" class="widget-link drilldown_MAJOR" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="As calculated on Oct 01 2015 22:08">
+<span id="m_major_violations">0</span></a>
+</td>
+<td class="thin nowrap">
+
+<i class="icon-trend-0"></i>
+</td>
+</tr>
+<tr>
+<td class="thin nowrap">
+<i class="icon-severity-minor"></i>
+Minor</td>
+<td class="thin right nowrap">
+<a href="http://localhost:9000/component_issues?id=com.maxcheung%3Asimple-map#resolved=false|severities=MINOR" class="widget-link drilldown_MINOR" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="As calculated on Oct 01 2015 22:08">
+<span id="m_minor_violations">8</span></a>
+</td>
+<td class="thin nowrap">
+
+<i class="icon-trend-0"></i>
+</td>
+</tr>
+<tr>
+<td class="thin nowrap">
+<i class="icon-severity-info"></i>
+Info</td>
+<td class="thin right nowrap">
+<a href="http://localhost:9000/component_issues?id=com.maxcheung%3Asimple-map#resolved=false|severities=INFO" class="widget-link drilldown_INFO" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="As calculated on Oct 01 2015 22:08">
+<span id="m_info_violations">0</span></a>
+</td>
+<td class="thin nowrap">
+
+<i class="icon-trend-0"></i>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+          <div class="clear"></div>
+        </div>
+      
+
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+
+
+
+          
+              
+
+
+
+
+
+          
+              
+
+
+  <div class="block" id="block_9">
+    
+
+    <div class="file_design" style="height:100%;">
+      
+        <div class="widget">
+          
+<div class="widget-row">
+  <div class="widget-span widget-span-5">
+    <div class="widget-measure-container">
+      <div class="widget-measure widget-measure-main">
+        <span class="widget-label">Directory tangle index</span>
+        <span class="nowrap">
+          <a href="http://localhost:9000/design/index/com.maxcheung:simple-map" class="widget-link " rel="" title=""><span id="m_package_tangle_index">0.0%</span></a>
+                  </span>
+      </div>
+
+      
+        <div class="widget-measure">
+          <span class="widget-label"> cycles</span>
+          <span class="nowrap">
+            <span class="widget-medium">&gt;</span>
+            <a href="http://localhost:9000/design/index/com.maxcheung:simple-map" class="widget-link " rel="" title=""><span id="m_package_cycles">0</span></a>
+                      </span>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="widget-span widget-span-5">
+    <div class="widget-measure-container">
+      <div class="widget-measure widget-measure-main">
+        <span class="widget-label">Dependencies to cut</span>
+      </div>
+
+      
+        <div class="widget-measure">
+          <span class="widget-label"> between directories</span>
+          <span class="nowrap">
+            <a href="http://localhost:9000/design/index/com.maxcheung:simple-map" class="widget-link " rel="" title=""><span id="m_package_feedback_edges">0</span></a>
+                      </span>
+        </div>
+      
+
+      
+        <div class="widget-measure">
+          <span class="widget-label"> between files</span>
+          <span class="nowrap">
+            <a href="http://localhost:9000/design/index/com.maxcheung:simple-map" class="widget-link " rel="" title=""><span id="m_package_tangles">0</span></a>
+                      </span>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+          <div class="clear"></div>
+        </div>
+      
+
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+
+
+
+          
+              
+
+
+
+
+
+          
+        </div>
+      </div>
+    
+  </div>
+  <div style="clear: both;"></div>
+</div>
+
+<script>
+  jQuery('html').addClass('dashboard-page');
+  jQuery('[data-toggle="tooltip"]').tooltip({ container: '#body' });
+</script>
+
+    </div>
+  </div>
+</div>
+
+
+  
+  <div id="footer" class="page-footer page-container">
+    
+    <div>SonarQube™ technology is powered by <a href="http://www.sonarsource.com/" target="SonarSource SA">SonarSource SA</a></div>
+    <div>
+      Version 5.1.2 -
+      <a href="http://www.gnu.org/licenses/lgpl-3.0.txt" target="lgpl_v3">LGPL v3</a> -
+      <a href="http://www.sonarqube.org/" target="sonar">Community</a> -
+      <a href="http://www.sonarqube.org/documentation" target="sonar_doc">Documentation</a> -
+      <a href="http://www.sonarqube.org/support" target="support">Get Support</a> -
+      <a href="http://redirect.sonarsource.com/doc/plugin-library.html" target="plugins">Plugins</a> -
+      <a href="http://localhost:9000/api_documentation">Web Service API</a>
+      
+    </div>
+    <!--[if lte IE 8 ]><br/><span class="ie-warn">IE 8 is not supported. Some widgets may not be properly displayed. Please switch to a <a target="_blank" href="http://redirect.sonarsource.com/doc/requirements.html">supported version or another supported browser</a>.</span><!--<![endif]-->
+  </div>
+
+
+
+<script>
+  window.navbarOptions = new Backbone.Model();
+
+  window.navbarOptions.set({
+    qualifiers: [
+      
+      'TRK'
+      
+    ]
+  });
+  window.SS.isUserAdmin = false;
+</script>
+
+
+
+
+
+
+
+<script>
+  window.navbarOptions.set({
+    globalDashboards: [
+      
+      {
+        url: '/dashboard/?did=4',
+        name: 'Home'
+      }
+      
+    ],
+    globalPages: [
+      
+    ],
+    
+    
+    
+  });
+</script>
+
+
+
+  
+
+
+<script>
+  window.navbarOptions.set({
+    contextId: '5',
+    contextKey: 'com.maxcheung:simple-map',
+    contextUuid: '3db56dc3-4a6e-4735-8969-c7282c4566ee',
+    contextComparable: true,
+    canFavoriteContext: false,
+    isContextFavorite: false,
+    
+    contextVersion: '1.0',
+    
+    
+    contextDate: '2015-10-01T22:08:15+10:00',
+    
+    contextDashboards: [
+      
+      {
+        url: '/dashboard/index?id=com.maxcheung:simple-map&did=1',
+        name: 'Main Dashboard'
+      }, 
+      
+      {
+        url: '/dashboard/index?id=com.maxcheung:simple-map&did=2',
+        name: 'Issues Report'
+      }, 
+      
+      {
+        url: '/dashboard/index?id=com.maxcheung:simple-map&did=3',
+        name: 'Time Machine'
+      }
+      
+    ],
+    contextExtensions: [
+      
+    ]
+  });
+
+  
+
+  window.navbarOptions.set({
+    contextBreadcrumbs: [
+      
+      
+      {
+        q: 'TRK',
+        url: '/dashboard/index?id=com.maxcheung%3Asimple-map',
+        name: 'simple-map'
+      },
+      
+    ]
+  });
+</script>
+
+
+<script>
+  var sonarRecentHistory = new Sonar.RecentHistory();
+  
+  sonarRecentHistory.add(
+      'com.maxcheung:simple-map',
+      'simple-map',
+      'trk');
+  
+</script>
+<script>
+  require(['nav/app']);
+</script>
+
+<!--[if lte IE 7 ]>
+<div style="position:fixed;z-index:99999;top:0;bottom:0;left:0;right:0;background:#fff;">
+  <div style="margin-top:150px;text-align:center;line-height:1.4;color:#333;">
+    The web interface cannot be displayed because your browser is not supported.<br>
+    Please switch to a <a target="_blank"
+                          href="http://redirect.sonarsource.com/doc/requirements.html">supported version or another supported browser</a>.
+  </div>
+</div>
+<!--<![endif]-->
+
+
+<script>
+
+
+
+</script>
+
+
+<ul class="processes-container"></ul></body></html>

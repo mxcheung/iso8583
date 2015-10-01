@@ -9,8 +9,8 @@ import com.maxcheung.simplemap.impl.SimpleMapImpl;
 @Configuration
 public class AppConfig {
 
-	@Bean(name = "simpleMapBean")
-	public SimpleMap simpleMap() {
-		return new SimpleMapImpl();
-	}
+    @Bean(name = "simpleMapBean")
+    public SimpleMap simpleMap() {
+        return new SimpleMapImpl();
+    }
 }
